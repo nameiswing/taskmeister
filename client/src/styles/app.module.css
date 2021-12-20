@@ -1,3 +1,7 @@
 .app {
-    color: red;
+    padding: 1rem 2rem;
+}
+.text {
+    background-color: var(--warning-light);
+    color: var(--text-primary);
 }

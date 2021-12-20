@@ -1,5 +1,5 @@
 import { useDataContext } from './context/ContextProvider';
-import classes from "./styles/app.module.css";
+import { app, text } from "./styles/app.module.css";
 
 const App = () => {
 
@@ -7,8 +7,9 @@ const App = () => {
     console.log(state)
     
     return (
-        <div>
-            <p className={classes.app}>{state}</p>
+        <div className={`${app} ${text}`}>
+            <p>{state}</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, repudiandae.</p>
         </div>
     )
 }

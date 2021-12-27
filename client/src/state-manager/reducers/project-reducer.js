@@ -1,4 +1,4 @@
-const reducer = (state = [], action) => {
+const reducer = (state = [{name: "Taskmeister", summary: "This is a final capstone project."}], action) => {
     switch (action.type) {
         case 'NEW_PROJECT':
             return state = [...state, action.payload];

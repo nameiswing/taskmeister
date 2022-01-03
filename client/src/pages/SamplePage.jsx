@@ -1,30 +1,33 @@
-import styled from 'styled-components';
-import React, { useState, useEffect } from 'react';
+// import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import Table from 'react-bootstrap/Table';
+import css from "../styles/app.module.css";
+
 
 const SamplePage = () => {
+
+    const { app, text } = css;
 
     const { project } = useSelector( state => state );
     console.log(project)
     
     return (
-        <div>
-            <Table bordered>
+        <div className="table-responsive">
+            <Table bordered className={`${app} ${text} p-4`} style={{borderRadius: '.5rem'}}>
                 <thead>
                     <tr>
-                        <TH>ID</TH>
-                        <TH>Project Name</TH>
-                        <TH>Summary</TH>
+                        <th className="p-2">ID</th>
+                        <th className="p-2">Project Name</th>
+                        <th className="p-2">Summary</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         project.map( (item, index) => (
-                            <tr key={index}>
-                                <TD>{index + 1}</TD>
-                                <TD>{item.name}</TD>
-                                <TD>{item.summary}</TD>
+                            <tr key={index} >
+                                <td className="p-3" >{index + 1}</td>
+                                <td className="p-3" >{item.name}</td>
+                                <td className="p-3" >{item.summary}</td>
                             </tr>
                         ))
                     }
@@ -35,10 +38,3 @@ const SamplePage = () => {
 }
 
 export default SamplePage
-
-const TH = styled.th`
-    padding: .25rem .5rem;
-`
-const TD = styled.td`
-    padding: 1rem !important;
-`

@@ -5,6 +5,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useDispatchActions } from "../state-manager/dispatchActions"
 
+
+
 const SamplePageInput = () => {
 
     const project = useSelector( state => state.project );
@@ -22,7 +24,7 @@ const SamplePageInput = () => {
         onSubmit={ 
             e => { 
                 e.preventDefault(); 
-                newProject(projectItem)
+                newProject(projectItem);
             }
         }
         className="p-4 my-5"
@@ -37,7 +39,7 @@ const SamplePageInput = () => {
                 <Form.Control type="text" name="summary" value={project.summary} onChange={handleChange} required />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" className="btn-">
                 Submit
             </Button>
         </StyledForm>

@@ -1,0 +1,16 @@
+
+.css-shadow-lg {
+    box-shadow: 0 .75rem 3rem #274c7733;
+}
+.css-shadow-sm {
+    box-shadow: 0 .25rem .75rem #274c7733;
+}
+.css-rounded-lg {
+    border-radius: 1rem;
+}
+.css-text-primary {
+    color: var(--bg-primary);
+}
+.css-text-secondary {
+    color: var(--text-secondary);
+}

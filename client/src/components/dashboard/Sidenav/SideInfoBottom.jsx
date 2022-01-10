@@ -1,4 +1,4 @@
-import css from "./styles/dashboard-sideinfo.module.css";
+import css from "../styles/dashboard-sideinfo.module.css";
 import { BiChevronRight, BiErrorCircle } from "react-icons/bi";
 
 const SideInfoBottom = () => {

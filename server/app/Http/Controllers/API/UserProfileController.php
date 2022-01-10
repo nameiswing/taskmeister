@@ -12,7 +12,6 @@ class UserProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -22,7 +21,6 @@ class UserProfileController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -35,29 +33,26 @@ class UserProfileController extends Controller
             'password' => 'required | min:6'
         ]);
         if ($validator->fails()) {
-            return response()->json(['status' => 400, 'errors' => $validator->errors()]);
+            return response()->json(['status' => 400, 'errors' => $validator->errors(), 'test'=>$request->password]);
         } else {
             $hashedPassword = Hash::make($request->input('password'));
 
             $userProfile = new UserProfile();
             $userProfile->first_name = $request->input('first_name');
-            $userProfile->middle_name = $request->input('middle_name');
+            $userProfile->middle_name = $request->input('middle_name', '');
             $userProfile->last_name = $request->input('last_name');
             $userProfile->nickname = $request->input('nickname', 'User');
             $userProfile->email_address = $request->input('email_address');
             $userProfile->password = $hashedPassword;
             $userProfile->access_type = $request->input('access_type', 'admin');
             $userProfile->save();
-            
+
             return response()->json(['status' => 200, 'message' => 'Profile created successfully.']);
         }
-
-
     }
 
     /**
      * Display the specified resource.
-     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
@@ -80,7 +75,6 @@ class UserProfileController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

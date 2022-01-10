@@ -7,7 +7,7 @@ import ContentFour from "./ContentFour";
 //COMPONENT STARTS HERE
 const OverView = () => {
     return (
-        <main className={`${css.overview} d-flex flex-column mx-5 gap-4 w-100 pb-5`}>
+        <main className={`${css.overview} d-flex flex-column mx-4 gap-4 w-100 pb-5`}>
             <ContentOne />
             <div className={`d-flex flex-column flex-xxl-row gap-4 w-100 h-100`}>
                 <div className={`d-flex flex-row flex-xxl-column gap-4 w-100 h-100`}>

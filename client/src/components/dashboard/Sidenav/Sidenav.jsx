@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import css from "./styles/dashboard-sidenav.module.css";
+import css from "../styles/dashboard-sidenav.module.css";
 import {
     BiHomeAlt,
     BiFolderOpen,
@@ -15,7 +15,7 @@ import SidenavLink from './SidenavLink';
 //COMPONENT STARTS HERE
 const Sidenav = () => {
 
-    const [ currentPath, setCurrentPath ] = useState("overview");
+    const [ currentPath, setCurrentPath ] = useState("");
 
     const links = [
         {name: "Overview", icon: <BiHomeAlt fontSize="1.5rem" /> },
@@ -26,6 +26,35 @@ const Sidenav = () => {
         {name: "Settings", icon: <BiCog fontSize="1.5rem" /> },
         {name: "Help", icon: <BiHelpCircle fontSize="1.5rem" /> },
     ]; //icons will inheret parent font color
+
+    function pathCheck() {
+        const pathname = window.location.pathname;
+        switch(pathname) {
+            case '/dashboard':
+                return setCurrentPath('overview');
+            case '/dashboard/overview':
+                return setCurrentPath('overview');
+            case '/dashboard/projects':
+                return setCurrentPath('projects');
+            case '/dashboard/tasks':
+                return setCurrentPath('tasks');
+            case '/dashboard/members':
+                return setCurrentPath('members');
+            case '/dashboard/add%20member':
+                return setCurrentPath('add member');
+            case '/dashboard/settings':
+                return setCurrentPath('settings');
+            case '/dashboard/help':
+                return setCurrentPath('help');
+            default:
+                return '/'
+        }
+    }
+
+    useEffect(() => {
+        pathCheck();
+    }, []);
+
     
     return (
         <aside>

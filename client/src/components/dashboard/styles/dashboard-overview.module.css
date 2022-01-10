@@ -24,12 +24,11 @@
     background-color: var(--bg-white);
 }
 .content_one h2 > span, .content_one h3 {
-    font-weight: 700;
     color: var(--text-secondary);
     font-size: 1rem;
 }
-.content_one h2 > b {
-    color: var(--text-primary);
+.content_one h2 span.name {
+    color: var(--text-primary) !important;
 }
 .content_two, .content_three {
     background-color: var(--bg-secondary-lighter);
@@ -44,13 +43,13 @@
     animation-delay: 0;
 }
 .content_two {
-    animation-delay: .3s;
+    animation-delay: .2s;
 }
 .content_three {
-    animation-delay: .6s;
+    animation-delay: .4s;
 }
 .content_four {
-    animation-delay: .9s;
+    animation-delay: .6s;
 }
 .content_four button{
     outline: 0;

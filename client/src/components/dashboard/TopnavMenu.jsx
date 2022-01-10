@@ -7,6 +7,7 @@ const TopnavMenu = ({hidden}) => {
             <button>Join a Project</button>
             <hr className="dropdown-divider"/>
             <button>Add Member</button>
+            <button>New Project</button>
             <hr className="dropdown-divider"/>
             <button>Profile Settings</button>
             <button>Logout</button>

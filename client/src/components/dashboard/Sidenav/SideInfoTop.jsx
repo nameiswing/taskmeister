@@ -1,4 +1,4 @@
-import css from "./styles/dashboard-sideinfo.module.css";
+import css from "../styles/dashboard-sideinfo.module.css";
 import { BiChevronRight, BiErrorCircle } from "react-icons/bi";
 
 const SideInfoTop = () => {
@@ -11,15 +11,15 @@ const SideInfoTop = () => {
             <div className={`${css.notif_container}`}>
                 <div className="d-flex align-items-center py-3 mb-2" >
                     <BiErrorCircle fontSize="1.25rem" color="var(--accent)"/>
-                    <span className={`${css.notif} ms-1`} title={"5 min ago"}>Task 101: Deadline 21:00</span>
+                    <span className={`${css.notif} ms-1`} title={"5 min ago"}>Task 101: Due on 21:00</span>
                 </div>
                 <div className="d-flex align-items-center py-3 mb-2" >
                     <BiErrorCircle fontSize="1.25rem" color="var(--success)"/>
-                    <span className={`${css.notif} ms-1`} title={"10 min ago"}>Task 104: Deadline Wednesday</span>
+                    <span className={`${css.notif} ms-1`} title={"10 min ago"}>Task 104: Due on Wednesday</span>
                 </div>
                 <div className="d-flex align-items-center py-3 mb-2" >
                     <BiErrorCircle fontSize="1.25rem" color="var(--success)"/>
-                    <span className={`${css.notif} ms-1`} title={"25 min ago"}>Task 108: Deadline Friday</span>
+                    <span className={`${css.notif} ms-1`} title={"25 min ago"}>Task 108: Due on Friday</span>
                 </div>
             </div>
         </div>

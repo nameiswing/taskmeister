@@ -8,44 +8,48 @@
     --bg-primary: #274C77;
     --bg-primary-light: #5e98db;
     --bg-secondary: #EDF1F7;
-    --bg-secondary-darker: #9eacc2;
+    --bg-secondary-darker: #c1cad8;
     --bg-secondary-lighter: #f8fafc;
     --bg-white: #fefefe;
     --text-primary: var(--bg-primary);
     --text-primary-light: #E4E9F2;
-    --text-secondary: #5f80a5;
+    --text-secondary: #557394;
     --accent: #dd3d6d;
     --accent-light: hsl(342, 73%, 90%);
-    --success: #4CAF50;
+    --success: #4caf72;
     --success-light: hsl(122, 39%, 85%);
     --warning: #e7e54d;
     --warning-light: hsl(58, 76%, 90%);
+    font-size: 14px;
 }
 * {
     box-sizing: border-box;
-    font-family: var(--font-main);
+    font-family: var(--font-content);
 }
 html {
     background-color: var(--bg-secondary);
 }
-
+html, body, #root  {
+    height: 100%;
+}
 body {
     margin: 0;
     background-color: var(--bg-white);
 }
 p {
     font-family: var(--font-main);
-    line-height: 165%;
-    font-size: 1rem;
-    font-weight: 300;
+    line-height: 150%;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--text-secondary);
 }
 h1, h2, h3 ,h4, h5, h6 {
     margin: 0;
     padding: 0;
+    font-weight: 700 !important;
 }
 a {
     text-decoration: none;
-    font-family: var(--font-main);
 }
 form label {
     font-size: .875rem;

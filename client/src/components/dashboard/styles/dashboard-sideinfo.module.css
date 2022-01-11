@@ -2,6 +2,7 @@
     margin-right: 3rem;
     /* background-color: #fff; */
     width: 18rem;
+    opacity: 0;
 }
 .info {
     border-radius: 1.25rem;

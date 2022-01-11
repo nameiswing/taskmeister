@@ -58,7 +58,7 @@ const Sidenav = () => {
     
     return (
         <aside>
-            <nav className={`${css.side_container} d-flex flex-column pb-5 flex-shrink-0`}>
+            <nav className={`${css.side_container} d-flex flex-column pb-5 flex-shrink-0 side-left-in`}>
                 {
                     links.map((link, index) => (
                         <SidenavLink

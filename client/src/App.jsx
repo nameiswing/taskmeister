@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import OverView from "./components/dashboard/Overview";
 import Projects from "./components/dashboard/Projects";
 import NotFound from "./components/NotFound";
+import Tasks from "./components/dashboard/Tasks";
+import Members from "./components/dashboard/Members";
+import Home from './pages/home/Home';
 
 const App = () => {
     const { project } = useSelector((state) => state);
@@ -18,10 +21,13 @@ const App = () => {
             <Router>
                 <Routes>
                     <Route path="/">
+                        <Route path="" element={ <Home /> } />
                         <Route path="dashboard" element={ <Dashboard /> } >
                             <Route path="" element={ <OverView /> } />
                             <Route path="overview" element={ <OverView /> } />
                             <Route path="projects" element={ <Projects /> } />
+                            <Route path="tasks" element={ <Tasks /> } />
+                            <Route path="members" element={ <Members /> } />
                             <Route path="*" element={ <NotFound /> } />
                         </Route>
                         <Route path="*" element={ <NotFound /> } />

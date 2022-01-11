@@ -1,4 +1,4 @@
-import css from './styles/projects.module.css';
+import css from './projects.module.css';
 import { BiPlus } from 'react-icons/bi'
 import ProjectItem from './ProjectItem';
 
@@ -18,12 +18,12 @@ const index = () => {
                     <a href="">Completed</a>
                 </div>
                 <button className={`css-button-sm ms-auto ${css.nav_button}`}>
-                    <BiPlus fontSize="1.5rem" />Add
+                    <BiPlus fontSize="1.5rem" />Add Project
                 </button>
             </div>
-            <div className={` ${css.item_container} d-flex gap-3 flex-wrap ps-4 pt-2 pb-4`}>
+            <div className={` ${css.item_container} d-flex gap-3 flex-wrap px-4 pt-2 pb-4`}>
                 {projects.map( (item, idx) => (
-                    <ProjectItem project={item} delay={.2 * (idx+1)}/>
+                    <ProjectItem key={idx} project={item} delay={.2 * (idx+1)}/>
                 ))}
             </div>
         </div>

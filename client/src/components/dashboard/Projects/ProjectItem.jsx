@@ -1,4 +1,4 @@
-import css from "./styles/projects.module.css";
+import css from "./projects.module.css";
 
 const ProjectItem = ({ project, delay }) => {
     return (

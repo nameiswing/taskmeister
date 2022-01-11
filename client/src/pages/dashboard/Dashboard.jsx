@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import SideInfo from "../../components/dashboard/Sidenav/SideInfo";
 import Sidenav from "../../components/dashboard/Sidenav/Sidenav";
-import Topnav from "../../components/dashboard/Topnav";
+import Topnav from "../../components/dashboard/Topnav/Topnav";
 import css from "./dashboard.module.css";
 
 const Dashboard = () => {

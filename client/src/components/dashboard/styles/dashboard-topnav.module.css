@@ -25,7 +25,7 @@
 .profile_icon {
     height: 2.75rem;
     width: 2.75rem;
-    background-color: var(--bg-primary-light);
+    /* background-color: var(--bg-primary-light); */
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -74,7 +74,8 @@
 .profile_icon img {
     position: absolute;
     top: -.25rem;
-    left:-.0625rem;
+    left:50%;
+    transform: translate(-50%, 0)
 }
 
 /* @media screen and (min-width: 75rem) {

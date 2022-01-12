@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import FormControl from "./FormControl";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 //COMPONENT STARTS HERE
 const RegisterForm = () => {
@@ -125,8 +126,8 @@ const RegisterForm = () => {
     }, [validator.passwordConfirm.value, profile.password, profile.email_address]);
 
     return (
-        <div className="h-100 w-100 d-flex py-3">
-            <form autoComplete="off" className="m-auto rounded" onSubmit={createUserProfile}>
+        <div className="h-100 w-100 d-flex py-3 ">
+            <form autoComplete="off" className="m-auto rounded container-md" onSubmit={createUserProfile}>
             <FormControl 
                         label="First Name"
                         type="text"
@@ -199,6 +200,7 @@ const RegisterForm = () => {
                     <input type="button" value="Reset" className=" css-fw-600 btn btn-outline-secondary css-rounded px-4 ms-auto" onClick={resetFields} />
                     <input type="submit" value="Register Profile" className="css-fw-600 border-0 py-2 css-rounded css-bg-primary text-light px-4 ms-3 css-btn" />
                 </div>
+                <p className="mt-4">Have an account? <Link to="/login">Login</Link></p>
             </form>
         </div>
     );

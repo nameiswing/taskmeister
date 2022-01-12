@@ -13,16 +13,16 @@ const Login = () => {
                     <span>Homepage</span>
                 </Link>
                 <Link 
-                    to="/login" 
+                    to="/register" 
                     className={`css-btn css-fw-600 px-3 css-bg-primary text-light d-flex align-items-center css-rounded`}
                 >
-                    <span className={``}>SignUp</span>
+                    <span className={``}>Sign Up</span>
                     <BiHighlight fontSize="1.5rem"/>
                 </Link>
                 
             </div>
-            <div className={`row container m-auto pb-5 gap-4`}>
-                <div className="col flex-shrink-0">
+            <div className={`row container m-auto pb-5 gap-4 h-100`}>
+                <div className="col">
                     <Banner />
                 </div>
                 <div className="col-md-6 p-0">

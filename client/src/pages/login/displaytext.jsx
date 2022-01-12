@@ -1,13 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function displaytext() {
     return (
-        <div>
-            <h3 className="py-1 css-text-primary"><span className="fs-1 fw-bold">t</span>askmeister</h3>
-                            <p className="p-1">Welcome, Please log-in your Account</p>
-                            <h1 className="css-text-primary p-1">Log In</h1>
+        <div className="mb-4">
+            <h1 className="css-text-primary p-1 mb-3">Log In</h1>
+            <p className="p-1">Please enter you account email and password.</p>
         </div>
-    )
+    );
 }
 
-export default displaytext
+export default displaytext;

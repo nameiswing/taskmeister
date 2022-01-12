@@ -11,6 +11,7 @@ import Members from "./components/dashboard/Members";
 import Home from './pages/home/Home';
 import Register from "./pages/register/";
 import axios from 'axios';
+import Login from "./pages/login";
 
 axios.defaults.baseURL = "http://localhost:8000";
 
@@ -29,6 +30,7 @@ const App = () => {
                     <Route path="/">
                         <Route path="" element={ <Home /> } />
                         <Route path="register" element={ <Register /> } />
+                        <Route path="login" element={ <Login /> } />
                         <Route path="dashboard" element={ <Dashboard /> } >
                             <Route path="" element={ <OverView /> } />
                             <Route path="overview" element={ <OverView /> } />

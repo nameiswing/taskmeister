@@ -22,7 +22,7 @@ const Register = () => {
                 
             </div>
             <div className={`row container m-auto pb-5 gap-4`}>
-                <div className="col flex-shrink-0">
+                <div className="col">
                     <Banner />
                 </div>
                 <div className="col-md-6 p-0">

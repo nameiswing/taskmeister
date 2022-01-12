@@ -9,6 +9,12 @@ import NotFound from "./components/NotFound";
 import Tasks from "./components/dashboard/Tasks";
 import Members from "./components/dashboard/Members";
 import Home from './pages/home/Home';
+import Register from "./pages/register/";
+import axios from 'axios';
+
+axios.defaults.baseURL = "http://localhost:8000";
+
+console.log(axios.defaults.baseURL);
 
 const App = () => {
     const { project } = useSelector((state) => state);
@@ -22,6 +28,7 @@ const App = () => {
                 <Routes>
                     <Route path="/">
                         <Route path="" element={ <Home /> } />
+                        <Route path="register" element={ <Register /> } />
                         <Route path="dashboard" element={ <Dashboard /> } >
                             <Route path="" element={ <OverView /> } />
                             <Route path="overview" element={ <OverView /> } />

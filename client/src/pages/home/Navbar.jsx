@@ -15,7 +15,7 @@ function Navbar() {
                 <li>
                     <Link 
                         to="/login" 
-                        className='text-light css-bg-primary px-3 css-rounded d-flex gap-2 align-items-center'
+                        className='css-btn text-light css-bg-primary px-3 css-rounded d-flex gap-2 align-items-center'
                         style={{height: '2.5rem'}}
                     >
                         Login

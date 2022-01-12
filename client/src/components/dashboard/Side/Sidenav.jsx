@@ -47,7 +47,7 @@ const Sidenav = () => {
             case '/dashboard/help':
                 return setCurrentPath('help');
             default:
-                return '/'
+                return '/dashboard'
         }
     }
 

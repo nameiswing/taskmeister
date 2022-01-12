@@ -1,4 +1,4 @@
-import css from "../styles/dashboard-overview.module.css";
+import css from "./overview.module.css";
 import { BiPlus } from "react-icons/bi";
 
 const ContentFour = () => {

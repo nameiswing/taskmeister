@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import FormControl from "./FormControl";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 //COMPONENT STARTS HERE
 const RegisterForm = () => {
+
+    const navigate = useNavigate();
+    
     const initialState = {
         first_name: "",
         middle_name: "",
@@ -27,7 +30,11 @@ const RegisterForm = () => {
     }
     function resetFields(e) {
         e.preventDefault();
-        setProfile(initialState)
+        setProfile(initialState);
+        setValidator( state => {
+            state.passwordConfirm.value = '';
+            return {...state};
+        })
     }
     
     function rulesCheck() {
@@ -111,12 +118,15 @@ const RegisterForm = () => {
             axios.post('api/create-user', profile).then( res => {
                 if(res.data.status === 200) {
                     console.log(res.data.message)
+                    navigate('/login')
                 } else if(res.data.status === 400) {
                     console.log(res.data.errors)
                 }
             })
         } catch (error) {
             console.log(error.message)
+        } finally {
+            resetFields(e);
         }
     }
 

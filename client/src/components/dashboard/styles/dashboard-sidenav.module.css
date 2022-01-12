@@ -4,7 +4,7 @@
     height:calc(100vh - 6.75rem);
 }
 .link {
-    border-radius: 0 1rem 1rem 0;
+    border-radius: 1rem;
     /* transition: .2s; */
     display: inline-block;
     text-decoration: none;
@@ -23,11 +23,20 @@
     transition: all .2s;
     /* border: .25rem solid var(--bg-secondary); */
 }
-/* @media screen and (min-width: 75rem) {
+ @media screen and (max-width: 992px) {
+    .link_name {
+        display: none;
+    }
     .link {
-        padding-inline: 4rem;
+        padding: .75rem 1.5rem;;
     }
 }
+@media screen and (max-width: 1200px) {
+    .link {
+        border-radius: 0 1rem 1rem 0;
+    }
+}
+/*
 @media screen and (max-width: 36rem) {
     .link {
         padding-inline: 3rem;

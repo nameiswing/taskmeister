@@ -9,7 +9,7 @@ const Topnav = () => {
     
     return (
         <header className={`py-2 container-fluid css-shadow-lg mb-5 ${css.header_container}`} >
-            <div className="d-flex align-items-center justify-content-between">
+            <div className="d-flex align-items-center justify-content-between container-xl">
                 <div className={`${css.brand} `}>
                     <b>t</b>askmeister
                 </div>

@@ -45,6 +45,7 @@ class UserProfileController extends Controller
             $userProfile->email_address = $request->input('email_address');
             $userProfile->password = $hashedPassword;
             $userProfile->access_type = $request->input('access_type', 'admin');
+            $userProfile->avatar_seed = $userProfile->first_name[0] .' '. $userProfile->last_name[0];
             $userProfile->save();
 
             return response()->json(['status' => 200, 'message' => 'Profile created successfully.']);

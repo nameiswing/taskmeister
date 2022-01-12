@@ -1,4 +1,4 @@
-import css from "../styles/dashboard-overview.module.css";
+import css from "./overview.module.css";
 import ContentOne from "./ContentOne";
 import ContentTwo from "./ContentTwo";
 import ContentThree from "./ContentThree";
